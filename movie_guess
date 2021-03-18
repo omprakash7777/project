@@ -1,0 +1,29 @@
+def remove_letter(movie_name,alphabets):
+    chances=5
+    c=0
+    while(chances>0):
+        
+        print("avalaible alphabets......:")
+        print(alphabets)
+        print("guess the letter")
+        ch=input()
+        if ch in movie_name:
+            index_ch=movie_name.index(ch)
+            l[index_ch]=ch
+            alphabets.remove(ch)
+            print(chances)
+            print(l)
+            
+        else:
+            chances=chances-1
+            print(chances)
+            print(l)
+        if "".join(movie_name)=="".join(l):
+            print("you won")
+            break
+        
+l1="project"
+l=['_']*7
+movie_name=list(l1)
+alphabets=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+remove_letter(movie_name,alphabets)
